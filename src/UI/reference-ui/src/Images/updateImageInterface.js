@@ -81,9 +81,9 @@ function updateImageInterface(context) {
     applyGradientOpacity(context, {
       data: { name, gradientOpacity: actorContext.gradientOpacity },
     })
-    applyGradientOpacityScale(context, {
-      data: { name, gradientOpacityScale: actorContext.gradientOpacityScale },
-    })
+    // applyGradientOpacityScale(context, {
+    //   data: { name, gradientOpacityScale: actorContext.gradientOpacityScale },
+    // })
     applyVolumeSampleDistance(context, {
       data: { name, volumeSampleDistance: actorContext.volumeSampleDistance },
     })

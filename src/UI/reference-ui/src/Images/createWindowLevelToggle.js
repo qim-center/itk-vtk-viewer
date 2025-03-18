@@ -29,7 +29,7 @@ function createWindowLevelToggle(context, uiContainer) {
       },
     })
   })
-  uiContainer.appendChild(windowLevelToggle)
+  // uiContainer.appendChild(windowLevelToggle)
 }
 
 export default createWindowLevelToggle

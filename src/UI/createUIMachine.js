@@ -27,12 +27,12 @@ function createUIMachine(options, context) {
           type: 'parallel',
           invoke: [
             {
-              id: 'main',
-              src: mainMachine,
-            },
-            {
               id: 'layers',
               src: layersMachine,
+            },
+            {
+              id: 'main',
+              src: mainMachine,
             },
             {
               id: 'images',

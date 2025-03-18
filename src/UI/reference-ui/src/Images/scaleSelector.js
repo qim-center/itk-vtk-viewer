@@ -20,11 +20,12 @@ const scaleSelector = (context, event) => (send, onReceive) => {
   const scaleSelectorDiv = document.createElement('div')
   scaleSelectorDiv.setAttribute(
     'style',
-    'display: flex; align-self: center; height: 25px; margin-right: 5px'
+    'display: flex; align-items: center; justify-content: center; height: 25px; margin-right: 5px'
   )
   context.images.componentAndScale.appendChild(scaleSelectorDiv)
 
   scaleSelectorDiv.innerHTML = `
+    <span class="${style.descriptionLabel}">Resolution Scale</span>
     <div itk-vtk-tooltip itk-vtk-tooltip-top-screenshot itk-vtk-tooltip-content="Resolution Scale"
       class="${style.blendModeButton}">
       <img src="${scaleSelectIconDataUri}" alt="Resolution Scale" />

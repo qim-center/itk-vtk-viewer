@@ -24,7 +24,7 @@ function createShadowToggle(context, uiContainer) {
       data: context.images.selectedName,
     })
   })
-  uiContainer.appendChild(shadowButton)
+  // uiContainer.appendChild(shadowButton)
 }
 
 export default createShadowToggle

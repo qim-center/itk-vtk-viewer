@@ -346,7 +346,7 @@ function createImagesUIMachine(options, context) {
             IMAGE_GRADIENT_OPACITY_SCALE_CHANGED: {
               actions: [
                 assignGradientOpacityScale,
-                'applyGradientOpacityScale',
+                // 'applyGradientOpacityScale',
               ],
             },
             IMAGE_VOLUME_SAMPLE_DISTANCE_CHANGED: {

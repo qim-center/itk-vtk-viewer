@@ -51,7 +51,7 @@ const imagesUIMachineOptions = {
     applyGradientOpacityScale,
     applyVolumeSampleDistance,
     applyBlendMode,
-    applyCinematicChanged,
+    applyCinematicChanged, // Call a function that basically doesn't do anythign as the element has been commented out from the user interface
 
     applyHistogram,
 

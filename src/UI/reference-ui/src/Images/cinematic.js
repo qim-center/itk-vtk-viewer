@@ -54,7 +54,12 @@ export function createCinematicParameters(context, rowParent) {
 }
 
 export function applyCinematicChanged(context, { actorContext }) {
+  // console.log('actorContext: ', actorContext)
   const { cinematicParameters } = actorContext
+  if (!sliderMap || sliderMap.size === 0) {
+    console.warn("sliderMap is empty or not populated. Skipping function execution.");
+    return;
+  }
   sliderMap.get(
     'scatteringBlend'
   ).disabled = !cinematicParameters.isCinematicPossible

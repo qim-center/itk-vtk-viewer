@@ -54,7 +54,8 @@
 
   --md-navigation-drawer-container-shape-start-end: 0;
   --md-navigation-drawer-container-shape-end-end: 0;
-  --md-navigation-drawer-container-color: rgba(128, 128, 128, 0.5);
+  /* --md-navigation-drawer-container-color: rgba(128, 128, 128, 0.5); */
+  --md-navigation-drawer-container-color: rgba(255, 255, 255, 0.5);
 }
 
 .drawer {
@@ -67,7 +68,8 @@
 }
 
 .uiGroup {
-  background: rgba(128, 128, 128, 0.5);
+  /* background: rgba(128, 128, 128, 0.5); */
+  background: #f3f3f3;
   border-radius: 4px;
   margin: 2px;
 }
@@ -89,7 +91,7 @@
 
 .planeUIRow {
   composes: uiRow;
-  background: rgba(128, 128, 128, 0.5);
+  /* background: rgba(128, 128, 128, 0.5); */
 }
 
 .layers {
@@ -258,13 +260,14 @@
 }
 
 .layerEntryCommon {
-  flex: 1;
+  /* flex:1; */
   display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  justify-content: space-between;
-  border-style: solid;
-  border-width: 2px;
+  flex-direction: column;  /* Ensures elements are in a row */
+  /* align-items: left;  Centers items vertically */
+  /* justify-content: left; Centers items horizontally */
+  gap: 10px; 
+  /* border-style: solid;
+  border-width: 2px; */
 }
 
 .layerEntryBrightBG {
@@ -285,6 +288,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   text-align: center;
+  text-transform: lowercase;
 }
 
 .layerLabelBrightBG {
@@ -629,6 +633,7 @@
   cursor: pointer;
   border-radius: 0.2em;
   opacity: 0.45;
+  opacity: 1; 
 }
 
 input:checked.toggleInput + label {
@@ -853,4 +858,72 @@ select:focus {
 .saveDialog label {
   display: flex;
   align-items: center;
+}
+
+.labelContainer {
+  display: flex;
+  flex-direction: column;   /* Stack label above the button */
+  align-items: center;      /* Center horizontally */
+  justify-content: center;  /* Center vertically if needed */
+}
+
+.buttonLabel {
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;       /* Ensure text is centered */
+  margin-bottom: 5px;       /* Space between the label and the button */
+  width: 100%;              /* Make label take full width for perfect centering */
+}
+
+.uiGroup > div {
+  margin-bottom: 15px; /* Space between each button container */
+}
+
+.uiGroup button {
+  margin-left: 10px; /* Space between label and button */
+}
+
+.buttonWithLabelContainer {
+  display: inline;
+  align-items: center; /* Vertically align the label and button */
+  margin-bottom: 10px; /* Space between button containers */
+  flex-direction: row;
+}
+
+.mainUIColumn {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  gap: 10px; /* Space between rows */
+}
+
+.buttonRow {
+  display: flex;
+  gap: 10px; /* Space between label and button */
+}
+
+.buttonRow div { 
+  display: flex; /* Ensures multiple buttons are in a row */
+  gap: 5px; /* Adjust spacing between multiple buttons */
+}
+
+.descriptionLabel {
+  display: flex;
+  font-weight: bold;
+  text-align: left;
+  font-size: 16px;
+  /* color: #4a4a4a; */
+  font-family: 'Arial', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.filenameLabel {
+  display: flex;
+  /* font-weight: lighter; */
+  text-align: left;
+  font-size: 16px;
+  /* color: #4a4a4a; */
+  font-family: 'Arial', sans-serif;
+  /* text-transform: lowercase; */
+  letter-spacing: 1px;
 }
