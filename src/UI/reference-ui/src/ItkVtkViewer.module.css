@@ -54,7 +54,7 @@
 
   --md-navigation-drawer-container-shape-start-end: 0;
   --md-navigation-drawer-container-shape-end-end: 0;
-  /* --md-navigation-drawer-container-color: rgba(128, 128, 128, 0.5); */
+  --md-navigation-drawer-container-color: rgba(128, 128, 128, 0.5);
   --md-navigation-drawer-container-color: rgba(255, 255, 255, 0.5);
 }
 
@@ -71,7 +71,7 @@
   /* background: rgba(128, 128, 128, 0.5); */
   background: #f3f3f3;
   border-radius: 4px;
-  margin: 2px;
+  margin: 5px;
 }
 
 .uiRow {
@@ -263,9 +263,8 @@
   /* flex:1; */
   display: flex;
   flex-direction: column;  /* Ensures elements are in a row */
-  /* align-items: left;  Centers items vertically */
-  /* justify-content: left; Centers items horizontally */
-  gap: 10px; 
+  /* align-items: center;   */
+  /* justify-content: center;  */
   /* border-style: solid;
   border-width: 2px; */
 }
@@ -641,7 +640,7 @@ input:checked.toggleInput + label {
 }
 
 .numberInput {
-  color: white;
+  color: black;
   background: transparent;
   font-size: 1em;
   padding-left: 2px;

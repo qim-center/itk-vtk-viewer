@@ -11,10 +11,10 @@ function createColorRangeInput(context, imageUIGroup) {
   colorRangeInputRow.setAttribute('class', style.uiRow)
   // This row needs background different from normal uiRows, to aid
   // in the illusion that it's the content portion of a tabbed pane
-  colorRangeInputRow.setAttribute(
-    'style',
-    'background: rgba(127, 127, 127, 0.5);'
-  )
+  // colorRangeInputRow.setAttribute(
+  //   'style',
+  //   'background: rgba(127, 127, 127, 0.5);'
+  // )
   context.images.colorRangeInputRow = colorRangeInputRow
   createInterpolationButton(context, colorRangeInputRow)
 

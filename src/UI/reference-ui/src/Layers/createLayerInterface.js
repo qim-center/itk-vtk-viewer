@@ -50,7 +50,7 @@ const createBoundingBoxButton = (context, buttonContainer, name) => {
   layerBBoxButton.innerHTML = `<input id="${context.id}-layerBBoxButton" type="checkbox" class="${style.toggleInput}"><label itk-vtk-tooltip itk-vtk-tooltip-top itk-vtk-tooltip-content="Bounding Box" class="${style.toggleButton}" for="${context.id}-layerBBoxButton"><img src="${boundingBoxIconDataUri}" alt="bbox"/></label>`
   const layerBBoxButtonInput = layerBBoxButton.children[0]
   const layerBBoxLabel = layerBBoxButton.children[1]
-  layerBBoxButton.style.height = '23px'
+  // layerBBoxButton.style.height = '23px'
   applyContrastSensitiveStyleToElement(
     context,
     'invertibleButton',
@@ -80,21 +80,13 @@ function createLayerEntry(context, name, layer) {
   // console.log('mainUIGroup in createLayerINterface', mainUIGroup)
 
   layerEntry.setAttribute('class', style.layerEntryCommon)
-  // layerEntry.style.borderWidth = '3px';
-  // layerEntry.style.paddingTop = '10px';    // Space above the content
-  // layerEntry.style.paddingRight = '20px';  // Space to the right
-  // layerEntry.style.paddingBottom = '10px'; // Space below
-  // layerEntry.style.paddingLeft = '20px';   // Space to the left
-  // layerEntry.style.margin = '0px';
-  // layerEntry.style.display = 'flex';
-  // layerEntry.style.flexDirection = 'column';  // Make children stack vertically
   applyContrastSensitiveStyleToElement(context, 'layerEntry', layerEntry)
 
   // Create a container to hold both the image name and the spinner
   const headerRow = document.createElement('div')
   headerRow.style.display = 'flex' // Use flexbox to align items horizontally
-  headerRow.style.alignItems = 'center' // Vertically align items
-  headerRow.style.marginBottom = '10px' // Add some space between header and bounding box
+  headerRow.style.alignItems = 'stretch' // Vertically align items
+  // headerRow.style.marginBottom = '10px' // Add some space between header and bounding box
   headerRow.style.justifyContent = 'space-between'
   headerRow.style.gap = '10px' // Space between items
 
@@ -143,13 +135,13 @@ function createLayerEntry(context, name, layer) {
 
   applyContrastSensitiveStyleToElement(context, 'layerLabel', layerLabel)
   layerLabel.style.display = 'flex'
-  layerLabel.style.alignItems = 'center'
-  layerLabel.style.gap = '10px'
+  // layerLabel.style.alignItems = 'center'
+  // layerLabel.style.gap = '10px'
 
   // Create the "File name" part of the label
   const fileNameText = document.createElement('span')
   fileNameText.setAttribute('class', style.descriptionLabel) // Apply filenameLabel style
-  fileNameText.innerText = 'File name' // This is the static part of the label
+  fileNameText.innerText = 'File name: ' // This is the static part of the label
   layerLabel.appendChild(fileNameText) // Append it to the label
 
   // Create the actual file name element
