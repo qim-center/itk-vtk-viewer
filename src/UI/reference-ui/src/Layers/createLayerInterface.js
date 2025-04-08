@@ -80,15 +80,17 @@ function createLayerEntry(context, name, layer) {
   // console.log('mainUIGroup in createLayerINterface', mainUIGroup)
 
   layerEntry.setAttribute('class', style.layerEntryCommon)
+  layerEntry.style.padding = '0' // Explicitly set padding to 0
+  layerEntry.style.margin = '0' // Set margin to 0 as well
   applyContrastSensitiveStyleToElement(context, 'layerEntry', layerEntry)
 
   // Create a container to hold both the image name and the spinner
   const headerRow = document.createElement('div')
-  headerRow.style.display = 'flex' // Use flexbox to align items horizontally
-  headerRow.style.alignItems = 'stretch' // Vertically align items
-  // headerRow.style.marginBottom = '10px' // Add some space between header and bounding box
+  headerRow.style.display = 'flex'
+  headerRow.style.alignItems = 'center' // Vertically center content
   headerRow.style.justifyContent = 'space-between'
-  headerRow.style.gap = '10px' // Space between items
+  headerRow.style.gap = '10px' // Adjust gap if needed
+  headerRow.style.padding = '0' // Make sure there is no extra padding
 
   const visibleButton = document.createElement('div')
   visibleButton.innerHTML = `<input id="${context.id}-visibleButton" type="checkbox" checked class="${style.toggleInput}"><label itk-vtk-tooltip itk-vtk-tooltip-top-annotations itk-vtk-tooltip-content="Visibility" class="${style.visibleButton} ${style.toggleButton}" for="${context.id}-visibleButton"><img src="${visibleIconDataUri}" alt="visible"/></label>`
@@ -135,8 +137,6 @@ function createLayerEntry(context, name, layer) {
 
   applyContrastSensitiveStyleToElement(context, 'layerLabel', layerLabel)
   layerLabel.style.display = 'flex'
-  // layerLabel.style.alignItems = 'center'
-  // layerLabel.style.gap = '10px'
 
   // Create the "File name" part of the label
   const fileNameText = document.createElement('span')
