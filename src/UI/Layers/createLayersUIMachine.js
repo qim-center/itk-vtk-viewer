@@ -157,7 +157,9 @@ const assignImageContext = assign({
       if (actorContext.colorMaps.has(component)) {
         continue
       }
-      let colorMap = 'CT-Chest-Vessels'
+      // let colorMap = 'CT-Chest-Vessels'
+      let colorMap = 'Magma (matplotlib)'
+
       // If a 2D RGB or RGBA
       if (components === 2) {
         switch (component) {

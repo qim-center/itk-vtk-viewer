@@ -10,10 +10,10 @@ const createTransferFunctionWidget = (context, imagesUIGroup) => {
   transferFunctionWidgetRow.setAttribute('class', style.uiRow)
   // This row needs background different from normal uiRows, to aid
   // in the illusion that it's the content portion of a tabbed pane
-  transferFunctionWidgetRow.setAttribute(
-    'style',
-    'background: rgba(127, 127, 127, 0.5);'
-  )
+  // transferFunctionWidgetRow.setAttribute(
+  //   'style',
+  //   'background: rgba(127, 127, 127, 0.5);'
+  // )
   imagesUIGroup.appendChild(transferFunctionWidgetRow)
   transferFunctionWidgetRow.appendChild(piecewiseWidgetContainer)
 

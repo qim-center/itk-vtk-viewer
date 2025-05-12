@@ -20,11 +20,12 @@ function createVolumeRenderingInputs(context, imagesUIGroup) {
   volumeRow2.setAttribute('class', style.uiRow)
   createSampleDistanceSlider(context, volumeRow2)
   createBlendModeSelector(context, volumeRow2)
-  imagesUIGroup.appendChild(volumeRow2)
+  // imagesUIGroup.appendChild(volumeRow2)
 
-  context.images.volumeUiElements = [volumeRow1, volumeRow2]
+  // context.images.volumeUiElements = [volumeRow1, volumeRow2]
+  context.images.volumeUiElements = [volumeRow1]
 
-  createCinematicParameters(context, imagesUIGroup)
+  // createCinematicParameters(context, imagesUIGroup)
 }
 
 export default createVolumeRenderingInputs

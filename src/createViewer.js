@@ -43,7 +43,7 @@ const createViewer = async (
     geometries,
     pointSets,
     use2D = undefined, // if undefined, use image dimension if exists
-    rotate = true,
+    rotate = false,
     config,
     gradientOpacity,
   }
