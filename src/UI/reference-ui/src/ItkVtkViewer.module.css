@@ -524,6 +524,8 @@
 }
 
 .distanceLabelCommon {
+  font-family: 'Arial', sans-serif;
+  text-transform: uppercase;
   border: none;
   background: transparent;
   font-size: 1.2em;
@@ -541,7 +543,7 @@
 
 .distanceInput {
   background: transparent;
-  color: white;
+  color: black;
   font-size: 1em;
   width: 80px;
 }
