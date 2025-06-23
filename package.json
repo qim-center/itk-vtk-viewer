@@ -1,6 +1,6 @@
 {
   "name": "@qim3d/itk-vtk-viewer",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Web-based image, mesh, and point set viewer",
   "keywords": [
     "3d",
@@ -20,7 +20,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/kitware/itk-vtk-viewer.git"
+    "url": "git+https://github.com/kitware/itk-vtk-viewer.git"
   },
   "license": "BSD-3-Clause",
   "bugs": {
@@ -152,7 +152,7 @@
     }
   },
   "bin": {
-    "itk-vtk-viewer": "./bin/itk-vtk-viewer-cli.js"
+    "itk-vtk-viewer": "bin/itk-vtk-viewer-cli.js"
   },
   "husky": {
     "hooks": {
@@ -161,5 +161,11 @@
   },
   "lint-staged": {
     "*.js": "prettier --write"
-  }
+  },
+  "directories": {
+    "doc": "doc",
+    "example": "examples",
+    "test": "test"
+  },
+  "author": "qim3d"
 }
