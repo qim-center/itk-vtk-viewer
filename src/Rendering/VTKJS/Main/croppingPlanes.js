@@ -150,7 +150,32 @@ export function createCropping(context) {
     }
   })
   context.itkVtkView.setWidgetManagerInitializedCallback(() => {
+    // Turn cropping ON so the widget is added
     toggleCroppingPlanes(context)
+
+    // Grab the *proxy* for our cropping-widget
+    const widgetProp = context.itkVtkView.getWidgetProp(
+      context.main.croppingWidget
+    )
+    if (!widgetProp) {
+      console.warn('Cropping widget proxy not found!')
+      return
+    }
+
+    // Recolor every actor in every representation to bright red
+    widgetProp.getRepresentations().forEach((rep, repIndex) => {
+      rep.getActors().forEach((actor, actorIndex) => {
+        const prop = actor.getProperty()
+        prop.setColor(0.0, 1.0, 0.0) // “face” color
+        prop.setEdgeColor(0.0, 1.0, 0.0) // line/edge color
+        // optionally tweak line width:
+        prop.setLineWidth(2)
+        console.log(`Recolored rep[${repIndex}] actor[${actorIndex}] to green`)
+      })
+    })
+
+    // Force a re-render so you see it immediately
+    context.itkVtkView.render()
   })
 }
 
