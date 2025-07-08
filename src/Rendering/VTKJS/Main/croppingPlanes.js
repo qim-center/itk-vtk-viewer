@@ -166,11 +166,10 @@ export function createCropping(context) {
     widgetProp.getRepresentations().forEach((rep, repIndex) => {
       rep.getActors().forEach((actor, actorIndex) => {
         const prop = actor.getProperty()
-        prop.setColor(0.0, 1.0, 0.0) // “face” color
-        prop.setEdgeColor(0.0, 1.0, 0.0) // line/edge color
-        // optionally tweak line width:
-        prop.setLineWidth(2)
-        console.log(`Recolored rep[${repIndex}] actor[${actorIndex}] to green`)
+        prop.setColor(0.0, 1.0, 0.0) // “face” color - this is the one that actually changes the bb color of the cropping widget
+        // prop.setEdgeColor(0.0, 1.0, 0.0) // line/edge color - it is not useful in this context
+        // prop.setLineWidth(2) // If we want to make the bb lines thicker
+        // console.log(`Recolored rep[${repIndex}] actor[${actorIndex}] to green`) // print for debugging
       })
     })
 
