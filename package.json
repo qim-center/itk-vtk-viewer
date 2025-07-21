@@ -1,6 +1,6 @@
 {
   "name": "@qim3d/itk-vtk-viewer",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Web-based image, mesh, and point set viewer",
   "keywords": [
     "3d",
